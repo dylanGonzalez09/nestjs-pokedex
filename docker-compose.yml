@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: mongo-db
+    restart: always
+    image: mongo:5
+    ports:
+      - 27017:27017
+    environment:
+      - MONGODB_DATABASE=pokedex
+    volumes:
+      - ./mongo:/data/db
